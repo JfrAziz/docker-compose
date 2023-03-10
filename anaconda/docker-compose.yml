@@ -1,0 +1,14 @@
+version: '3'
+
+volumes:
+  notebooks:
+    name: notebooks
+
+services:
+  notebooks:
+    build: .
+    container_name: notebooks
+    volumes:
+      - notebooks:/notebooks
+    ports:
+      - 8888:8888
